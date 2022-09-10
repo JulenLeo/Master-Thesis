@@ -1,0 +1,14 @@
+name: Market-Value-Shiny
+title: Market-Value-Shiny
+username:
+account: bkg8fh-julen-leo
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 6965219
+bundleId: 6286022
+url: https://bkg8fh-julen-leo.shinyapps.io/market-value-shiny/
+when: 1662744964.3957
+lastSyncTime: 1662744964.3957
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: train_and_test_df.RDs|train_df.RDs
