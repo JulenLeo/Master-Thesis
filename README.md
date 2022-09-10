@@ -13,4 +13,4 @@ The folder **data** contains all the data scraped.
 The folder **analyses** contains the R script where the exploratory analysis has been done and the statistical model has been fitted.
 
 ## Shiny
-The folder **shiny** contains the [Shiny web application](https://bkg8fh-julen-leo.shinyapps.io/market-value-shiny/)
+The folder **shiny** contains the scripts to run the [Shiny web application](https://bkg8fh-julen-leo.shinyapps.io/market-value-shiny/)
