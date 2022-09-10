@@ -21,14 +21,14 @@ library(htmltools)  ## includeHTML()
 # Load data ---------------------------------------------------------------
 ## check that this is the last updated data (explain this in: help--> about data)
 
-players_df <- readRDS('data/players_df.Rds')
-injuries_df <- readRDS('data/injuries_df.RDs')
-clubs_df <- readRDS('data/clubs_df.Rds')
-train_df <- readRDS('data/train.Rda')
-train_and_test_df <- readRDS('data/traintest.Rda')
+players_df <- readRDS('../shiny/data/players_df.Rds')
+injuries_df <- readRDS('../shiny/data/injuries_df.RDs')
+clubs_df <- readRDS('../shiny/data/clubs_df.Rds')
+train_df <- readRDS('../shiny/data/train.Rda')
+train_and_test_df <- readRDS('../shiny/data/traintest.Rda')
 
 # players_longitudinal_df <- readRDS("data/players_longitudinal_df.Rds") ## THIS DATA IS NOT MORE USED
-players_ids <- readRDS("data/players_ids.Rds")
+players_ids <- readRDS("../shiny/data/players_ids.Rds")
 
 options(scipen = 999)
 

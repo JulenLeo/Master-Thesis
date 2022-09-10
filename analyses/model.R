@@ -6,9 +6,11 @@ pacman::p_load(ggplot2, tibble, dplyr, mgcv, tidyverse, gratia,
                sjPlot, sjmisc, MASS, gamm4, mgcViz, devtools, Metrics, DHARMa,
                glmmTMB, plotly)
 
+
 # data
 
-players_df <- readRDS("data/players_all.Rds")
+players_df <- readRDS("../data/players_all.Rds")
+
 
 # merge observations of the same year
 

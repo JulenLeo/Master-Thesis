@@ -5,8 +5,8 @@ pacman::p_load(rvest, stringr, dplyr, purrr, doParallel, foreach, xml2, tibble)
 
 ## 1. Injuries ----
 
-load("data/players.RData")
-source("scraping/getinjury.R")
+load("../data/players.RData")
+source("../scraping/getinjury.R")
 
 cl <- makeCluster(7)
 registerDoParallel(cl, cores = 7)
@@ -66,6 +66,6 @@ injury_df$year <- NULL
 
 
 ## 2. SAVE injuries ----
-save(injury_df, file = "data\injuries.RData")
+save(injury_df, file = "../data/injuries.RData")
 
-saveRDS(injury_df, "data\injury_df.RDs", compress = TRUE)
+saveRDS(injury_df, "../data/injury_df.RDs", compress = TRUE)

@@ -5,7 +5,7 @@ pacman::p_load(rvest, stringr, dplyr, purrr, doParallel, foreach, xml2, tibble)
 
 ## 1. Players ----
 
-source("scraping/getplayers.R")
+source("../scraping/getplayers.R")
 
 ## LaLiga - Spain
 
@@ -70,7 +70,7 @@ players_ligue_df <- players_big_ligue_df[!duplicated(players_big_ligue_df$player
 
 ## 2. Players exposure ----
 
-source("scraping/getplayersexposure.R")
+source("../scraping/getplayersexposure.R")
 
 
 ## LaLiga - Spain
@@ -140,12 +140,12 @@ save(players_big_bundesliga_df, players_bundesliga_df, players_exposure_bundesli
      players_big_premier_df, players_premier_df, players_exposure_premier_df,
      players_big_seriesa_df, players_seriesa_df, players_exposure_seriesa_df,
      players_big_ligue_df, players_ligue_df, players_exposure_ligue_df,
-     file = "data\players.RData")
+     file = "../data/players.RData")
 
 
 ## 3. More players info ----
 
-source("scraping/getplayersinfo.R")
+source("../scraping/getplayersinfo.R")
 
 ## LaLiga - Spain
 
@@ -318,7 +318,7 @@ players_big_ligue_df$season <- year2season(players_big_ligue_df$year)
 
 ## clean market
 
-source("scraping/cleanMarket.R")
+source("../scraping/cleanMarket.R")
 options(scipen = 999)
 
 ## Market value
@@ -364,7 +364,7 @@ players_big_df <- left_join(players_big_df, players_df, by = c("player_name", "p
 
 ## 4. Players Goals ----
 
-source("scraping/getplayersgoals.R")
+source("../scraping/getplayersgoals.R")
 
 
 cl <- makeCluster(7)
@@ -480,6 +480,6 @@ save(players_big_bundesliga_df, players_bundesliga_df, players_exposure_bundesli
      players_big_seriesa_df, players_seriesa_df, players_exposure_seriesa_df,
      players_big_ligue_df, players_ligue_df, players_exposure_ligue_df,
      players_big_df, players_df, players_all_df,
-     file = "data\players.RData")
+     file = "../data\players.RData")
 
-saveRDS(players_all_df, "data\players_all_df.RDs", compress = TRUE)
+saveRDS(players_all_df, "../data/players_all_df.RDs", compress = TRUE)

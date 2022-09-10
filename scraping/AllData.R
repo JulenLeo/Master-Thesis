@@ -4,9 +4,9 @@ pacman::p_load(rvest, stringr, dplyr, purrr, doParallel, foreach, xml2, tibble)
 
 # load data
 
-load("data/clubs.RData")
-load("data/injuries.RData")
-load("data/players.RData")
+load("../data/clubs.RData")
+load("../data/injuries.RData")
+load("../data/players.RData")
 
 # prepare the data to merge it
 
@@ -505,4 +505,4 @@ players_all$foot <- factor(players_all$foot,
                                            "right"))
 
 # SAVE ----
-saveRDS(players_all, "data\players_all.RDs", compress = TRUE)
+saveRDS(players_all, "../data/players_all.RDs", compress = TRUE)

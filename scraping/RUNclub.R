@@ -4,7 +4,7 @@ pacman::p_load(rvest, stringr, dplyr, purrr, doParallel, foreach, xml2)
 
 # 1. Clubs ----
 
-source("scraping/getclub.R")
+source("../scraping/getclub.R")
 
 
 ## LaLiga - Spain
@@ -87,7 +87,7 @@ club_seriesa_df <- arrange(club_seriesa_df, club_name, year)
 club_ligue_df <- arrange(club_ligue_df, club_name, year)
 
 
-source("scraping/getclubPosition.R")
+source("../scraping/getclubPosition.R")
 
 
 ## LaLiga - Spain
@@ -152,7 +152,7 @@ club_ligue_df <- left_join(club_ligue_df, club_pos_ligue_df, by = c("club_name",
 
 ## clean market values
 
-source("scraping/cleanMarket.R")
+source("../scraping/cleanMarket.R")
 
 ## Total market value
 
@@ -198,6 +198,6 @@ clubs_df <- rbind(club_esp_df, club_premier_df, club_bundesliga_df, club_seriesa
 
 ## 2. SAVE clubs ----
 save(club_esp_df, club_premier_df, club_bundesliga_df, club_seriesa_df, club_ligue_df, clubs_df,
-     file = "data\clubs.RData")
+     file = "../data/clubs.RData")
 
-saveRDS(clubs_df, "data\clubs_df.RDs", compress = TRUE)
+saveRDS(clubs_df, "../data/clubs_df.RDs", compress = TRUE)
