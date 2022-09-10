@@ -1,0 +1,36 @@
+Family: gaussian
+Link function: identity
+
+Formula:
+  log10(market_value) ~ s(player_id, bs = "re") + s(age, player_id, bs = "re") +
+                        s(league, bs = "re") + s(club_name, bs = "re") +
+                        s(season, bs = "re") + s(age, by = position2) +
+                        minutes_played + goals + assists + ranking + position2
+
+Parametric coefficients:
+                        Estimate Std. Error t value Pr(>|t|)
+  (Intercept)          6.409e+00  5.495e-02 116.628  < 2e-16 ***
+  minutes_played       1.113e-04  3.208e-06  34.703  < 2e-16 ***
+  goals                8.512e-03  7.298e-04  11.664  < 2e-16 ***
+  assists              4.615e-03  9.545e-04   4.836 1.36e-06 ***
+  ranking             -9.805e-03  6.968e-04 -14.072  < 2e-16 ***
+  position2Midfielder  7.582e-02  2.026e-02   3.742 0.000184 ***
+  position2Forward     1.352e-01  2.316e-02   5.838 5.55e-09 ***
+  ---
+  Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Approximate significance of smooth terms:
+                                 edf Ref.df       F  p-value
+  s(player_id)               344.133    646   45.02  < 2e-16 ***
+  s(age,player_id)           283.490    649   48.47  < 2e-16 ***
+  s(league)                    3.677      4 9429.13  < 2e-16 ***
+  s(club_name)               114.517    163  103.34 6.61e-06 ***
+  s(season)                   14.896     15 1747.38  < 2e-16 ***
+  s(age):position2Defender     7.303      9 8824.43  < 2e-16 ***
+  s(age):position2Midfielder   6.677      9 4692.20  < 2e-16 ***
+  s(age):position2Forward      7.033      9 4386.07  < 2e-16 ***
+  ---
+  Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+R-sq.(adj) =  0.883   Deviance explained = 89.6%
+fREML = -862.33  Scale est. = 0.032697  n = 6987
