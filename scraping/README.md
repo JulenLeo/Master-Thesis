@@ -1,3 +1,4 @@
+# Scraping
 This folder contains 3 types of R scripts:
 * The scripts that start with **RUN-**: these are the scripts than need to be run to do the web scrapping from Transfermarkt.com. They have to be run in this order:
     1. **RUNclubs.R**: to obtain the data of the clubs.
