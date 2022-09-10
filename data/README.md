@@ -1,2 +1,2 @@
 # Data
-This folder contains all the data scraped by the *scraping* folder. The **players_all.Rds** is the file that contains almost all the iformation scraped and the one used in almost all the analyses of the thesis.
+This folder contains all the data scraped by the *scraping* folder. The **players_all.RDs** is the file that contains almost all the iformation scraped and the one used in almost all the analyses of the thesis.
